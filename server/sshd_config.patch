@@ -1,0 +1,42 @@
+# SSH Server Security Configuration
+# SSH 服务器安全配置 - 追加到 /etc/ssh/sshd_config
+
+# 基础安全
+Port 22
+Protocol 2
+
+# 禁用 root 登录
+PermitRootLogin no
+
+# 公钥认证 (必须)
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+
+# 禁用密码认证
+PasswordAuthentication no
+PermitEmptyPasswords no
+
+# 限制用户 (根据实际情况修改)
+AllowUsers proxyuser
+
+# SSH 隧道转发
+AllowTcpForwarding yes
+GatewayPorts no
+PermitTunnel no
+
+# 安全参数
+MaxAuthTries 3
+MaxSessions 10
+ClientAliveInterval 60
+ClientAliveCountMax 3
+LoginGraceTime 30
+
+# 日志
+SyslogFacility AUTH
+LogLevel INFO
+
+# 禁用敏感选项
+ PermitRootLogin no
+ X11Forwarding no
+ PrintMotd no
+ AcceptEnv LANG LC_*
