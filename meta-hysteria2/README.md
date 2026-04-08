@@ -68,7 +68,11 @@ ss -tulpn | grep 443
 
 ## 客户端配置
 
+<<<<<<< HEAD
 把 [client/mihomo.yaml.example](/D:/Test/服务转发/meta-hysteria2/client/mihomo.yaml.example) 复制到你的 Clash Meta 配置中，然后替换这几个字段：
+=======
+把 `client/mihomo.yaml.example` 复制到你的 Clash Meta 配置中，然后替换这几个字段：
+>>>>>>> bb0d11c9b69b76626dcb1ae5718f1edae9443e7f
 
 - `server`
 - `password`
