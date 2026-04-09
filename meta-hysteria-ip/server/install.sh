@@ -49,6 +49,10 @@ detect_arch() {
 install_dependencies() {
   if command -v apt-get >/dev/null 2>&1; then
     log "Installing dependencies..."
+    if command -v dpkg >/dev/null 2>&1; then
+      log "Repairing any interrupted dpkg state first..."
+      DEBIAN_FRONTEND=noninteractive dpkg --configure -a
+    fi
     apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
       curl \
