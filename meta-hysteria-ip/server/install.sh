@@ -73,7 +73,7 @@ resolve_latest_version() {
     return
   fi
 
-  log "Resolving latest sing-box version..."
+  log "Resolving latest sing-box version..." >&2
   curl -fsSL "https://api.github.com/repos/SagerNet/sing-box/releases/latest" \
     | jq -r '.tag_name' \
     | sed 's/^v//'
