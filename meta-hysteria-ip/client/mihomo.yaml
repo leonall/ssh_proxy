@@ -5,10 +5,10 @@ log-level: info
 ipv6: false
 
 proxies:
-  - name: "火山Openclaw服务器"
+  - name: "my-hy2-ip"
     type: hysteria2
     server: 69.5.21.28
-    port: 443
+    port: 11234
     password: "e18efb81b25d602b4882c9ebe876053b"
     obfs: salamander
     obfs-password: "034a2c227d649bed3b0fcc75d8118705"
@@ -16,8 +16,7 @@ proxies:
     alpn:
       - h3
     skip-cert-verify: true
-    up: "50 Mbps"
-    down: "200 Mbps"
+
 
 proxy-groups:
   - name: "PROXY"
