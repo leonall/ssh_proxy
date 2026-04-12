@@ -7,12 +7,12 @@ ipv6: false
 proxies:
   - name: "my-hy2-ip"
     type: hysteria2
-    server: 69.5.21.28
-    port: 11234
-    password: "e18efb81b25d602b4882c9ebe876053b"
+    server: ip
+    port: 443
+    password: "密码"
     obfs: salamander
-    obfs-password: "034a2c227d649bed3b0fcc75d8118705"
-    sni: 69.5.21.28
+    obfs-password: "密码"
+    sni: ip
     alpn:
       - h3
     skip-cert-verify: true
