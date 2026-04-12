@@ -15,26 +15,6 @@
 
 详细说明见 [meta-hysteria-ip/README.md](meta-hysteria-ip/README.md)
 
-## 目录结构
-
-```
-服务转发/
-├── meta-hysteria-ip/          # 当前使用的方案
-│   ├── README.md
-│   ├── server/
-│   │   ├── install.sh         # 服务端安装脚本
-│   │   ├── config.template.json
-│   │   └── sing-box.service
-│   └── client/
-│       └── mihomo.yaml        # Clash Meta 客户端配置
-│
-├── meta-hysteria2/            # 域名方案（备选）
-├── server/                    # Clash TUN 方案（老方案）
-├── client/
-│
-└── SSH-TUNNEL.md              # SSH 隧道方案（老方案）
-```
-
 ## 快速部署（meta-hysteria-ip）
 
 ### 1. 服务端
